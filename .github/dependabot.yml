@@ -1,0 +1,59 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+  - package-ecosystem: "" # See documentation for possible values
+    directory: "/" # Location of package manifests
+    schedule:
+      interval: "weekly"
+dependabot/npm_and_yarn/npm_and_yarn-79a8496460
+gh repo clone gm122921980-create/tanstack-template# 特权访问 GitHub 应用
+
+某些 GitHub Apps 是 GitHub 拥有的特权应用，具备特殊功能。
+
+某些 GitHub Apps 是特权应用。 这些应用为 GitHub 拥有，它们被授予特殊功能。 例如，用户可以授权这些应用，并使用这些应用访问组织中的数据，而无需组织批准。
+
+这些特权应用有些会自动包含在 GitHub 中，无需用户授权。 这些应用不会出现在你已授权的 GitHub Apps 列表中，也不会出现在你已安装的 GitHub Apps 列表中。Enterprise Managed Users 可以在其用户帐户上安装这些特权应用，而标准的非特权应用则无法安装到 Enterprise Managed Users 的用户帐户上。
+
+这些特权应用会显示在用户的安全日志中，但不会出现在组织或企业的审核日志中。 有关详细信息，请参阅 [审查您的安全日志](/zh/enterprise-cloud@latest/authentication/keeping-your-account-and-data-secure/reviewing-your-security-log)、[查看贵组织的审核日志](/zh/enterprise-cloud@latest/organizations/keeping-your-organization-secure/managing-security-settings-for-your-organization/reviewing-the-audit-log-for-your-organization) 和 [企业审核日志](/zh/enterprise-cloud@latest/admin/monitoring-activity-in-your-enterprise/reviewing-audit-logs-for-your-enterprise/about-the-audit-log-for-your-enterprise)。
+
+这些 GitHub Apps 为：
+
+* 操作
+* Dependabot
+* Git 源代码迁移程序
+* GitHub Advanced Security
+* GitHub Classroom
+* GitHub Codespaces
+* GitHub Copilot 插件
+* GitHub 合并队列
+* GitHub Pages
+* GitHub 项目自动化
+* GitHub 团队同步
+* 适用于 GitHub 的 Microsoft Teams
+* OpenGraph （`custom-og-image`）
+* Slack# GitHub CLI api
+# https://cli.github.com/manual/gh_api
+
+gh api \
+  --method POST \
+  -H "Accept: application/vnd.github+json" \
+  -H "X-GitHub-Api-Version: 2026-03-10" \
+  /app/installations/1/access_tokens \
+  --input - <<< '{
+  "repositories": [
+    "Hello-World"
+  ],
+  "permissions": {
+    "issues": "write",
+    "contents": "read"
+  }
+}'curl -L \
+  -X PUT \
+  -H "Accept: application/vnd.github+json" \
+  -H "Authorization: Bearer <YOUR-TOKEN>" \
+  -H "X-GitHub-Api-Version: 2026-03-10" \
+  https://api.github.com/app/installations/1/suspended
